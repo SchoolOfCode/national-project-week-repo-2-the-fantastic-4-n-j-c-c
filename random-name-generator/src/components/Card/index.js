@@ -9,4 +9,4 @@ return <div>
 </div>
 }
 
-export default Display;
+export default Card;
