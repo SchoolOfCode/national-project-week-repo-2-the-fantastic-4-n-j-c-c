@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Name from "../Name";
-
+import Button from "../Button";
 
 function Card() {
-return <div>
-    <Name text="Cigdem"/>
-</div>
+  const [name, setName] = useState("Cigdem");
+
+  function showName(newName) {
+    setName(newName);
+  }
+
+  return (
+    <div>
+      <Name text={name} />
+      <Button onClick={showName} />
+    </div>
+  );
 }
 
 export default Card;
