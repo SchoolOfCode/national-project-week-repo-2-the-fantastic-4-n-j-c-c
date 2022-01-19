@@ -4,7 +4,7 @@ import Name from "../Name";
 import Button from "../Button";
 
 function Card() {
-  const [name, setName] = useState("Cigdem");
+  const [name, setName] = useState("");
 
   function showName(newName) {
     setName(newName);

@@ -1,23 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Button({ onClick }) {
-  function getRandomNumber() {
-    return Math.floor(Math.random() * 10 + 1);
+  const [bootcamperName, setName] = useState("");
+
+  async function getRandomBootcampers() {
+    const num = Math.floor(Math.random() * 10 + 1);
+    const response = await fetch(
+      `https://socnamegenerator.herokuapp.com/bootcampers/${num}`
+    );
+    const data = await response.json();
+    console.log(data.payload[0].firstname);
+    const name = data.payload[0].firstname;
+    setName(name);
   }
 
   function handleClick(event) {
     event.preventDefault();
-    onClick(async () => {
-      const num = getRandomNumber();
-      console.log(num);
-      const fetchedName = await fetch(
-        `https://socnamegenerator.herokuapp.com/bootcampers/${num}`
-      );
-      const data = await fetchedName.json();
-      console.log(data.payload[0].firstname);
-      onClick(data);
-    });
+    onClick(bootcamperName);
   }
+
+  useEffect(
+    function () {
+      getRandomBootcampers();
+    },
+    [onClick]
+  );
 
   return <button onClick={handleClick}>Random Name</button>;
 }
