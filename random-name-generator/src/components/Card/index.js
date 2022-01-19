@@ -11,7 +11,7 @@ function Card() {
   }
 
   return (
-    <div>
+    <div className = "card">
       <Name text={name} />
       <Button onClick={showName} />
     </div>
