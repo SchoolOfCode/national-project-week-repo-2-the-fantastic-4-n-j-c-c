@@ -83,6 +83,14 @@ function App() {
     setCurrentIndex(chosen);
   }
 
+  //change the ischosen from false to true if selected
+  //unchosenBootcampers array
+  //useState
+  //spread the array
+  //select only the bootcamper with the id (idOfUnchosenBootcamper)
+  //select the ischosen key within that bootcamper(object)
+  //update the ischosen key to be true.
+
   return (
     <div className="App">
       <Card
