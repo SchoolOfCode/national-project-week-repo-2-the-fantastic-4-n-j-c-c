@@ -9,13 +9,14 @@ function Button({ onClick }) {
       `https://socnamegenerator.herokuapp.com/bootcampers/${num}`
     );
     const data = await response.json();
+    console.log(data);
     console.log(data.payload[0].firstname);
     const name = data.payload[0].firstname;
     setName(name);
   }
 
   function handleClick(event) {
-    event.preventDefault();
+    
     onClick(bootcamperName);
   }
 
