@@ -8,15 +8,22 @@ function Button({ onClick }) {
     const response = await fetch(
       `https://socnamegenerator.herokuapp.com/bootcampers/${num}`
     );
-    const data = await response.json();
-    console.log(data);
+    let data = await response.json();
+    console.log(data)
+    while (data.payload[0].ischosen){
+      const num = Math.floor(Math.random() * 10 + 1);
+    const response = await fetch(
+      `https://socnamegenerator.herokuapp.com/bootcampers/${num}`
+    );
+    data = await response.json();
+    }
+
     console.log(data.payload[0].firstname);
     const name = data.payload[0].firstname;
     setName(name);
   }
 
-  function handleClick(event) {
-    
+  function handleClick() {
     onClick(bootcamperName);
   }
 
