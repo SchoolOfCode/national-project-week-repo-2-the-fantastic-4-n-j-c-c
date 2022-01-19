@@ -4,10 +4,8 @@ import Card from "../Card/index.js";
 
 function App() {
   return (
-    <div className="background">
-      <div className="App">
-        <Card />
-      </div>
+    <div className="App">
+      <Card />
     </div>
   );
 }
