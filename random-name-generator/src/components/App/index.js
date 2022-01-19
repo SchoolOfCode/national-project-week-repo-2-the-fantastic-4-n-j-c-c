@@ -1,11 +1,13 @@
-import './App.css';
+import "./App.css";
 
-import Card from '../Card/index.js';
+import Card from "../Card/index.js";
 
 function App() {
   return (
-    <div className="App">
-    <Card />
+    <div className="background">
+      <div className="App">
+        <Card />
+      </div>
     </div>
   );
 }
