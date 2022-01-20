@@ -69,12 +69,11 @@ const nameList = [
 function App() {
   const [bootcampers, setBootcampers] = useState(nameList);
   const [currentIndex, setCurrentIndex] = useState(4);
-
+  
   // useEffect(() => {
   //   async function getData() {
   //     const response = await fetch(`https://socnamegenerator.herokuapp.com/bootcampers`)
   //     const json = await response.json();
-
   //     const {payload} = json;
   //     setBootcampers(payload)
   //     const randNum = Math.floor(Math.random() * (payload.length - 1 ));
@@ -131,18 +130,3 @@ console.log("original list", bootcampers);
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

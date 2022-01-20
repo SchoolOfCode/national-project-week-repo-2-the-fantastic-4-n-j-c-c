@@ -4,6 +4,7 @@
   background-image: url(../../starBackground.jpeg);
   background-position: "center";
   background-repeat: "repeat";
+  background-size: cover;
   height: 100vh;
   width: 100vw;
 }
@@ -15,10 +16,8 @@
   background-position: center;
   background-size: cover;
 } */
+
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #f2f2f2;
   padding: 5%;
   font-size: 1.1em;

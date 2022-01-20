@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Button.css";
 
+import "./Button.css";
 const localURL = "http://localhost:3000";
 
 function Button({ onClick }) {
