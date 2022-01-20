@@ -69,6 +69,8 @@ const nameList = [
 function App() {
   const [bootcampers, setBootcampers] = useState(nameList);
   const [currentIndex, setCurrentIndex] = useState();
+  const [coinInstructionText, setCoinInstructionText] = useState("Flip Coin");
+  const [coinText, setCoinText] = useState("Coin");
 
   useEffect(() => {
     async function getData() {
@@ -130,6 +132,30 @@ function App() {
     }
   }
 
+  function flipCoin() {
+    //want flip to choose head or tails at random
+    //create variable with coinChoices
+    //array with "heads", "tails"
+    //create variable with flipMove
+    //randomly pick coinChoices (Math.floor(Math.random()*2))
+    //if coinChoices = heads
+    //setState of coinInstructionText to "answer question" && set text of coin to heads
+    //else setState of coinInstructionText to "Pick another bootcamper" && set text of coin to tails
+
+    const coinChoices = ["heads", "tails"];
+    const flipMove = coinChoices[Math.floor(Math.random() * 2)];
+
+    if (flipMove === "heads") {
+      setCoinInstructionText("Please answer");
+      setCoinText("Heads");
+    } else {
+      setCoinInstructionText("Pick another bootcamper");
+      setCoinText("Tails");
+    }
+    console.log(coinInstructionText);
+    console.log(coinText);
+  }
+
   return (
     <div className="App">
       <div className="title">
@@ -142,6 +168,9 @@ function App() {
           <Card
             bootcamper={bootcampers[currentIndex]}
             chooseNewBootcamper={getNewBootcamper}
+            coinInstructionText={coinInstructionText}
+            coinText={coinText}
+            flip={flipCoin}
           />
         )}
     </div>
