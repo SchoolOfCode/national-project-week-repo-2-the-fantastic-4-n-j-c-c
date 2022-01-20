@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Card from "../Card/index.js";
 
@@ -70,6 +70,7 @@ function App() {
   const [bootcampers, setBootcampers] = useState(nameList);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
   function getNewBootcamper() {
     const unchosenBootcampers = bootcampers.filter((bootcamper) => {
       return bootcamper.ischosen === false;
@@ -84,12 +85,18 @@ function App() {
   }
 
   //change the ischosen from false to true if selected
-  //unchosenBootcampers array
-  //useState
-  //spread the array
-  //select only the bootcamper with the id (idOfUnchosenBootcamper)
-  //select the ischosen key within that bootcamper(object)
-  //update the ischosen key to be true.
+    //unchosenBootcampers array
+    //useState (setBootcampers)
+      //spread the original bootcampers array (THIS IS CAUSING AN INFINITE LOOP)
+        //This needs to be wrapped in a useEffect
+        //select only the bootcamper with the id (idOfUnchosenBootcamper)
+        //select the ischosen key within that bootcamper(object)
+        //update the ischosen key to be true.
+useEffect(() => {
+  setBootcampers([...bootcampers])
+}, [])
+//console.log(bootcampers);
+
 
   return (
     <div className="App">
