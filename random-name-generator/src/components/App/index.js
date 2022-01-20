@@ -8,31 +8,31 @@ const nameList = [
     id: 1,
     firstname: "Cigdem",
     lastname: "Ozturk",
-    ischosen: true,
+    ischosen: false,
   },
   {
     id: 2,
     firstname: "Jenny",
     lastname: "Lewis-Gandy",
-    ischosen: true,
+    ischosen: false,
   },
   {
     id: 3,
     firstname: "Novel",
     lastname: "Alam",
-    ischosen: true,
+    ischosen: false,
   },
   {
     id: 4,
     firstname: "Chun Wai",
     lastname: "Lo",
-    ischosen: true,
+    ischosen: false,
   },
   {
     id: 5,
     firstname: "Mark",
     lastname: "Young",
-    ischosen: true,
+    ischosen: false,
   },
   {
     id: 6,
@@ -68,21 +68,22 @@ const nameList = [
 
 function App() {
   const [bootcampers, setBootcampers] = useState(nameList);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(4);
 
+  // useEffect(() => {
+  //   async function getData() {
+  //     const response = await fetch(`https://socnamegenerator.herokuapp.com/bootcampers`)
+  //     const json = await response.json();
+
+  //     const {payload} = json;
+  //     setBootcampers(payload)
+  //     const randNum = Math.floor(Math.random() * (payload.length - 1 ));
+  //     setCurrentIndex(randNum)
+  //   }
+  //   getData();
+  // }, [])
 
   function getNewBootcamper() {
-    const unchosenBootcampers = bootcampers.filter((bootcamper) => {
-      return bootcamper.ischosen === false;
-    });
-    const randNum = Math.floor(Math.random() * unchosenBootcampers.length);
-
-    const idOfUnchosenBootcamper = unchosenBootcampers[randNum].id;
-    const chosen = bootcampers.findIndex(
-      (b) => b.id === idOfUnchosenBootcamper
-    );
-    setCurrentIndex(chosen);
-  }
 
   //change the ischosen from false to true if selected
     //unchosenBootcampers array
@@ -92,20 +93,84 @@ function App() {
         //select only the bootcamper with the id (idOfUnchosenBootcamper)
         //select the ischosen key within that bootcamper(object)
         //update the ischosen key to be true.
-useEffect(() => {
-  setBootcampers([...bootcampers])
-}, [])
-//console.log(bootcampers);
+console.log("original list", bootcampers);
+      const bootcampersUpdated = bootcampers.map((bootcamper, i) => {
+        if (i===currentIndex) {
+          return { ...bootcamper, ischosen:true }
+        } 
+        return bootcamper;
+      })
 
+    const unchosenBootcampers = bootcampersUpdated.filter((bootcamper) => {
+      return bootcamper.ischosen === false;
+    });
+    const randNum = Math.floor(Math.random() * unchosenBootcampers.length);
+
+    const idOfUnchosenBootcamper = unchosenBootcampers[randNum].id;
+    const chosen = bootcampers.findIndex(
+      (b) => b.id === idOfUnchosenBootcamper
+    );
+    setCurrentIndex(chosen);
+    setBootcampers(bootcampersUpdated);
+  console.log("updated list", bootcampers)
+  }
 
   return (
     <div className="App">
+      {/* {bootcampers.length > 0 && currentIndex >= 0 &&  */}
+      <div className="title">
+        <h1>School of Code Name Generator</h1>
+      </div>
       <Card
         bootcamper={bootcampers[currentIndex]}
         chooseNewBootcamper={getNewBootcamper}
       />
+      {/* } */}
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// async function fetchData() {
+//   const dataa = [];
+//   const data = await fetch(
+//    `https://socnamegenerator.herokuapp.com/bootcampers`
+//   );
+//   const res = await data.json();
+//   // console.log("RESPONSE", res.payload);
+//   // dataa.push(res.payload);
+//   // console.log("DATA: ", dataa[0]);
+
+//   const stringified = JSON.stringify(res.payload);
+//   const parseObj = JSON.parse(stringified);
+//   console.log("ARRAY: ", parseObj);
+//   console.log("LENGTH: ", parseObj.length);
+
+//   const list = [];
+
+//   for (let i = 0; i < parseObj.length; i++) {
+//    const name = parseObj[i];
+//    list.push(name);
+//   }
+//   console.log("LIST: ", list);
+//  }
+
+//  useEffect(function () {
+//   fetchData();
+//  }, []);
+
+
