@@ -4,66 +4,66 @@ import { useState, useEffect } from "react";
 import Card from "../Card/index.js";
 
 const nameList = [
-  {
-    id: 1,
-    firstname: "Cigdem",
-    lastname: "Ozturk",
-    ischosen: false,
-  },
-  {
-    id: 2,
-    firstname: "Jenny",
-    lastname: "Lewis-Gandy",
-    ischosen: false,
-  },
-  {
-    id: 3,
-    firstname: "Novel",
-    lastname: "Alam",
-    ischosen: false,
-  },
-  {
-    id: 4,
-    firstname: "Chun Wai",
-    lastname: "Lo",
-    ischosen: false,
-  },
-  {
-    id: 5,
-    firstname: "Mark",
-    lastname: "Young",
-    ischosen: false,
-  },
-  {
-    id: 6,
-    firstname: "Juan",
-    lastname: "Castel",
-    ischosen: false,
-  },
-  {
-    id: 7,
-    firstname: "Inga",
-    lastname: "Safranova",
-    ischosen: false,
-  },
-  {
-    id: 8,
-    firstname: "Mihai",
-    lastname: "Butoi",
-    ischosen: false,
-  },
-  {
-    id: 9,
-    firstname: "Will",
-    lastname: "Calderbank",
-    ischosen: false,
-  },
-  {
-    id: 10,
-    firstname: "Kieran",
-    lastname: "Megahey",
-    ischosen: false,
-  },
+  // {
+  //   id: 1,
+  //   firstname: "Cigdem",
+  //   lastname: "Ozturk",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 2,
+  //   firstname: "Jenny",
+  //   lastname: "Lewis-Gandy",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 3,
+  //   firstname: "Novel",
+  //   lastname: "Alam",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 4,
+  //   firstname: "Chun Wai",
+  //   lastname: "Lo",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 5,
+  //   firstname: "Mark",
+  //   lastname: "Young",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 6,
+  //   firstname: "Juan",
+  //   lastname: "Castel",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 7,
+  //   firstname: "Inga",
+  //   lastname: "Safranova",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 8,
+  //   firstname: "Mihai",
+  //   lastname: "Butoi",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 9,
+  //   firstname: "Will",
+  //   lastname: "Calderbank",
+  //   ischosen: false,
+  // },
+  // {
+  //   id: 10,
+  //   firstname: "Kieran",
+  //   lastname: "Megahey",
+  //   ischosen: false,
+  // },
 ];
 
 function App() {
