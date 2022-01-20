@@ -68,7 +68,7 @@ const nameList = [
 
 function App() {
   const [bootcampers, setBootcampers] = useState(nameList);
-  const [currentIndex, setCurrentIndex] = useState(4);
+  const [currentIndex, setCurrentIndex] = useState();
 
   useEffect(() => {
     async function getData() {
