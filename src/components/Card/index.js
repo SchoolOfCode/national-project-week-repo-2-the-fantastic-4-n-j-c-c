@@ -16,6 +16,7 @@ function Card({
   return (
     <div className="card">
       <Name text={bootcamper.firstname} />
+      <Name text={bootcamper.lastname} />
       <Button onClick={chooseNewBootcamper} />
       <Coin onClick={flip} coinText={coinText} />
       <CoinInstruction coinInstructionText={coinInstructionText} />
