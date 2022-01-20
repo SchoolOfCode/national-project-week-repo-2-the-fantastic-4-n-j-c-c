@@ -145,32 +145,4 @@ export default App;
 
 
 
-// async function fetchData() {
-//   const dataa = [];
-//   const data = await fetch(
-//    `https://socnamegenerator.herokuapp.com/bootcampers`
-//   );
-//   const res = await data.json();
-//   // console.log("RESPONSE", res.payload);
-//   // dataa.push(res.payload);
-//   // console.log("DATA: ", dataa[0]);
-
-//   const stringified = JSON.stringify(res.payload);
-//   const parseObj = JSON.parse(stringified);
-//   console.log("ARRAY: ", parseObj);
-//   console.log("LENGTH: ", parseObj.length);
-
-//   const list = [];
-
-//   for (let i = 0; i < parseObj.length; i++) {
-//    const name = parseObj[i];
-//    list.push(name);
-//   }
-//   console.log("LIST: ", list);
-//  }
-
-//  useEffect(function () {
-//   fetchData();
-//  }, []);
-
 

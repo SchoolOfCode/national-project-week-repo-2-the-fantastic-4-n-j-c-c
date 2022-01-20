@@ -22,4 +22,7 @@
   color: #f2f2f2;
   padding: 5%;
   font-size: 1.1em;
+  text-decoration: underline;
+  text-decoration-color: #4a90e2;
+  text-decoration-thickness: 8px;
 }
