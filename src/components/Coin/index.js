@@ -3,9 +3,11 @@ import "./Coin.css";
 
 function Coin({ onClick, coinText }) {
   return (
-    <button className="coin" onClick={onClick}>
-      {coinText}
-    </button>
+    <div>
+      <button className="coin" onClick={onClick}>
+        {coinText}
+      </button>
+    </div>
   );
 }
 

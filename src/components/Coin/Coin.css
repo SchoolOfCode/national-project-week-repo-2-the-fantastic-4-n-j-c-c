@@ -1,0 +1,14 @@
+.coin {
+  border-radius: 50%;
+  background-color: #f8b430;
+  border-style: solid;
+  border-width: thick;
+  border-color: #f2cf0d;
+  width: 90px;
+  height: 90px;
+  font-weight: bolder;
+  color: #f2f2f2;
+  font-display: center;
+  /* margin-top: 20%; */
+  font-size: 1.5em;
+}

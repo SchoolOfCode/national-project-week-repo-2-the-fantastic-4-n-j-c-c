@@ -130,9 +130,10 @@ function App() {
       setBootcampers(bootcampersUpdated);
       console.log("updated list", bootcampers);
     }
+    refreshCoin();
   }
 
-  function flipCoin() {
+  function flipCoin(event) {
     //want flip to choose head or tails at random
     //create variable with coinChoices
     //array with "heads", "tails"
@@ -154,6 +155,11 @@ function App() {
     }
     console.log(coinInstructionText);
     console.log(coinText);
+  }
+
+  function refreshCoin() {
+    setCoinText("Coin");
+    setCoinInstructionText("Flip Coin");
   }
 
   return (
