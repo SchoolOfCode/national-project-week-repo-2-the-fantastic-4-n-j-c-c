@@ -1,7 +1,7 @@
 .btn {
   display: flex;
   align-items: left;
-  border-radius: 14px;
+  border-radius: 20px;
   background-color: #31986a;
   border: none;
   width: 10em;
@@ -14,7 +14,24 @@
   text-align: center;
   justify-content: center;
   padding-top: 0.8em;
+  box-shadow: 5px 5px 5px rgb(159, 158, 158);
 }
+/* 
+.btn {
+  position: absolute;
+  left: 75px;
+  /* margin: 10px 15px; */
+/* border-radius: 20px;
+  background-color: #31986a;
+  border: none;
+  width: 250px;
+  height: 70px;
+  font-weight: bolder;
+  color: #f2f2f2;
+  margin-top: 20px;
+  font-size: 1.5em;
+  box-shadow: 5px 5px 5px rgb(190, 187, 187);
+} */
 
 .btn:hover {
   background-color: #4a90e2;

@@ -1,8 +1,21 @@
 .coinInstruction {
   display: flex;
-  align-items: right;
-  text-align: right;
+  align-items: center;
+  text-align: center;
   margin-top: 2.3em;
   margin-right: 2em;
   margin-left: 3.5em;
 }
+
+/* .coinInstructionText {
+  position: absolute;
+  right: 19%;
+  bottom: 20%;
+  font-style: normal;
+  font-weight: 600;
+  /* font-size: 36px; */
+/* text-align: center; */
+/* margin-top: 1px;
+  padding-left: 47%;
+  color: #000000;
+} */
