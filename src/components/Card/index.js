@@ -16,14 +16,18 @@ function Card({
   return (
     <div className="card">
       <div className="generatorAndCoin">
-        <Name className="firstname" text={bootcamper.firstname} />
+        <Name
+          className="firstname"
+          text={
+            bootcamper.firstname + " " + bootcamper.lastname.charAt(0) + "."
+          }
+        />
         <Coin onClick={flip} coinText={coinText} />
       </div>
       <div className="buttonAndResult">
         <Button onClick={chooseNewBootcamper} />
         <CoinInstruction coinInstructionText={coinInstructionText} />
       </div>
-    
     </div>
   );
 }
