@@ -1,4 +1,9 @@
 .name {
+  display: flex;
+  align-items: left;
   color: black;
   font-size: 4em;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  margin-left: 1em;
 }

@@ -1,4 +1,8 @@
 .coin {
+  float: right;
+  margin-top: 0.75em;
+  /* margin-left: 7em; */
+  margin-right: 3em;
   border-radius: 50%;
   background-color: #f8b430;
   border-style: solid;

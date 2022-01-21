@@ -1,0 +1,8 @@
+.coinInstruction {
+  display: flex;
+  align-items: right;
+  text-align: right;
+  margin-top: 2.3em;
+  margin-right: 2em;
+  margin-left: 3.5em;
+}

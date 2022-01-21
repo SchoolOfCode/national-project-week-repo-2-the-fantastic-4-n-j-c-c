@@ -15,11 +15,15 @@ function Card({
 }) {
   return (
     <div className="card">
-      <Name text={bootcamper.firstname} />
-      <Name text={bootcamper.lastname} />
-      <Button onClick={chooseNewBootcamper} />
-      <Coin onClick={flip} coinText={coinText} />
-      <CoinInstruction coinInstructionText={coinInstructionText} />
+      <div className="generatorAndCoin">
+        <Name className="firstname" text={bootcamper.firstname} />
+        <Coin onClick={flip} coinText={coinText} />
+      </div>
+      <div className="buttonAndResult">
+        <Button onClick={chooseNewBootcamper} />
+        <CoinInstruction coinInstructionText={coinInstructionText} />
+      </div>
+    
     </div>
   );
 }
